@@ -1,0 +1,729 @@
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255,254,248);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* styling the navigation */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+      padding: 1em 15em 0 15em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+span{
+  background: transparent;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1em;
+    cursor: pointer;
+    color: black;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 3px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+.logo{
+    width: 20em;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+
+  /* styling the video */
+
+  .video{
+    width: 100%;
+    position: relative;
+    
+  }
+
+/* Styling the text */
+
+
+  /* animating the text */
+ 
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+ /* Setting the initial position of the text to the right */
+#book-appointment {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  right: -50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 6em;
+  color: white;
+  background-color: rgba(173, 216, 230, 0.0);
+  z-index: 2;
+  text-align: center;
+}
+
+.book{
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  right: 15%;
+  top: 80%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: white;
+  background-color: rgba(173, 216, 230, 0.0);
+  z-index: 2;
+  text-align: center;
+
+} 
+
+
+/* Animating the text to move from the right to its fixed position */
+@keyframes float-in {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 30%;
+  }
+}
+
+/* Applying the animation to the text */
+#book-appointment {
+  animation-name: float-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+/* styling the about section */
+
+.aboutsection{
+  padding: 3em 15em 0 15em;
+  display: flex;
+  gap: 5em;
+  
+}
+
+.nailcare{
+  max-width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutnc, .add ,.snt{
+  text-align: center;
+}
+
+/* animating the images */
+
+.aboutsection {
+  display: flex;
+  gap: 4em;
+  align-items: center;
+}
+
+.nailcare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.nailcare img {
+  max-width: 100%;
+}
+
+.nailcare h3 {
+  margin-top: 20px;
+}
+
+.nailcare p {
+  margin-top: 10px;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#skilled{
+  margin-top: 4em;
+  position: relative;
+  
+  padding: 3em 15em 0 15em;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  gap: 2em;
+ 
+
+
+}
+
+.skill{
+  width: 38em;
+  position: absolute;
+  margin-top: 2.5em;
+}
+
+
+.nailtech{
+  background-color: antiquewhite;
+  width: 100%;
+  height: 30em;
+  margin-left: 18em;
+}
+
+.snt{
+  position: absolute;
+  margin-left: 22.5%;
+  margin-top: 2em;
+  background-color: antiquewhite;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.skillpara{
+  position: absolute;
+  width: 25%;
+  margin-left: 22.5%;
+  margin-top: 5%;
+  background-color: antiquewhite;
+}
+
+/* animating the about sectionp2 */
+
+/* #skilled {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1s, transform 1s;
+}
+
+#skilled.animate {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+.nailses{
+  width: 220px;
+  height: 130px;
+}
+
+.skillpara{
+  text-align: justify;
+}
+
+.sale{
+  position: relative;
+  margin-top: 2em;
+  background-image: url(../images/nailbiting\ sale.webp);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20em;
+}
+
+.nailbit{
+  padding: 2em;
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -19%;
+  margin-left: 18%;
+  text-align: center;
+  background-color: rgb(255,254,248,0.0);
+
+}
+
+.nailb{
+  font-size: 2em;
+}
+
+.promo{
+  font-size: 5em;
+}
+
+.nailb,.promo,.info{
+  background-color: rgb(255,254,248,0.0);
+  color: white;
+}
+
+.booknow{
+
+    width: 12em;
+    margin-top: 2em; 
+    padding: 1em; 
+    color:rgb(149, 110, 70);
+    border: none;
+
+}
+
+.booknow:hover{
+  cursor: pointer;
+  color: white;
+  background-color: rgb(149, 110, 70);
+  transition: 0.8s;
+}
+
+/* styling the the working hours */
+
+.workinghrs{
+  padding: 2em 15em 4em 15em;
+  display: flex;
+  gap: 2em;
+}
+
+
+
+.pa-dot-leaders{
+  width: 50%;
+}
+
+
+
+ul.pa-dot-leaders {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none
+}
+
+ul.pa-dot-leaders li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content:
+". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+}
+
+ul.pa-dot-leaders  span:first-child {
+  padding-right: 0.33em;
+  background: white
+}
+
+#pa-dot-leaders{
+  width: 100%;
+}
+
+ul.pa-dot-leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: white
+}
+
+
+
+
+.extension{
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.hours{
+  margin-top: 1em;
+}
+
+.work{
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.holidays{
+  width: 40%;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* .we,.work{
+  margin-top: 1em;
+} */
+
+.prices{
+  position: relative;
+  background-image: url(../images/brown\ palette\ quetax.webp);
+  background-size: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.pricelist{
+  position: absolute;
+  opacity: 0.8;
+  width: 70%;
+  margin-top: 2em;
+  padding: 2em 10em 2em 10em;
+  
+}
+
+.ourprices{
+  text-align: center;
+}
+
+.manicure{
+  line-height: 2;
+  font-size: 1em;
+  
+}
+
+.mani{
+  line-height: 3;
+}
+
+/* styling the latest news section */
+.latest{
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top:1em ;
+
+}
+
+.house-calls{
+  display: flex;
+  gap: 2em;
+  padding: 1em 5em 1em 5em;
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 1px 3px 10px 5px rgb(124, 124, 124);
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 2em;
+}
+
+.calls{
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.h-calls{
+  line-height: 2em;
+}
+
+/* styling the gallery section */
+
+.image-gallery{
+  padding-top: 2px;
+  background-color: antiquewhite;
+  color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+ 
+}
+
+.our-g,.ga{
+  text-align: center;
+
+  background-color: antiquewhite;
+}
+
+.our-gallery{
+  background-color: antiquewhite;
+  margin: auto;
+  width: 70%;
+}
+
+.nail{
+  cursor: pointer;
+  width: calc(33.33% - 1em);
+  margin: 0.5em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+.our-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2EM;
+}
+
+.nail {
+  width: calc(33.33% - 1em);
+  margin: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .nail {
+    width: calc(50% - 1em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nail {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* .our-gallery {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+} */ 
+
+
+.nail:hover {
+  opacity: 1;
+}
+
+.image-gallery .our-gallery .nail.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 50%;
+  height: 50%;
+  opacity: 1;
+}
+
+.image-gallery .our-gallery .nail.open:hover {
+  opacity: 1;
+}
+
+.image-gallery .our-gallery .nail.open + .nail {
+  display: none;
+}
+
+
+
+
+
+/* adding tesstimonials style */
+
+/* adding testimonals */
+
+.testi{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  
+}
+
+.quote{
+  margin: 1em;
+}
+
+.testi1{
+  background-image: url(../images/Group\ 1quotation.svg);
+  background-size: 12em;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  padding: 1em;
+  width: 33%;
+  
+  
+}
+
+.test , .sthandazile{
+  background: transparent;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.test{
+  padding: 1em;
+  border-right: solid 1px;
+  text-align: justify;
+}
+
+.sthandazile{
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+/* footer */
+
+footer{
+  background-color: antiquewhite;
+  
+}
+
+.cont-container{
+  background-color: antiquewhite;
+  margin: auto;
+  width: 40%;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.addres ,.cont ,.cont-container{
+  background: transparent;
+  
+
+}
+
+.cont{
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.addres ,.cont-container{
+  font-size: 1.2em;
+  line-height: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.subs-cont{
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+}
+
+.subs{
+  width: 35em;
+  height: 5em;
+  padding: 1em;
+}
+
+.join{
+  width: 7em;
+  height: 5em;
+background-color: rgb(149, 110, 70);
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.logoo{
+  width: 15%;
+  padding: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  
+}
+
+.socio{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+  .cc{
+    text-align: center;
+    width: 100%;
+    padding: 2em;
+  }
+
+
+
+
+
+
+
+
+
+

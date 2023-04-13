@@ -1,0 +1,432 @@
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255,254,248);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* styling the navigation */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+      padding: 1em 15em 0 15em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1em;
+    cursor: pointer;
+    color: black;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 3px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+.logo{
+    width: 20em;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+ 
+
+  /* ////////////////////////////////////////////////////////// */
+
+  /* styling the horizontal line */
+
+  /* hr{
+    width: 100%;
+    height: 50px;
+  }
+  */
+
+  #booking{
+    text-decoration: underline 2px;
+    
+
+  }
+
+
+ .backImg{
+  background-image:url(../images/unsplash_0gTyPRZXnhobackImg.svg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 50vh;
+
+
+ }
+
+ /* adding the about us section */
+
+ .aboutsection{
+  padding: 3em 15em 0 15em;
+  display: flex;
+  gap: 5em;
+  
+}
+
+.nailcare{
+  max-width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutnc, .add ,.snt{
+  text-align: center;
+}
+
+/* styling the form */
+.app-form{
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-top: 4em;
+}
+
+.todo{
+  width: 55%;
+  height: 760px;
+}
+
+
+form {
+  
+  max-width: 500px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.logo2{
+  margin-left: 2em;
+}
+
+form .book {
+  text-align: center;
+}
+
+form .name {
+  margin-bottom: 1em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color:rgb(149, 110, 70);
+}
+
+form button[type="submit"] {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  background-color:rgb(149, 110, 70);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color:rgb(149, 110, 70);
+}
+
+/* adding the promo style */
+
+.sale{
+  position: relative;
+  margin-top: 3em;
+  background-image: url(../images/nailbiting\ sale.webp);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20em;
+}
+
+.nailbit{
+  padding: 2em;
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: -19%;
+  margin-left: 18%;
+  text-align: center;
+  background-color: rgb(255,254,248,0.0);
+
+}
+
+.nailb{
+  font-size: 2em;
+}
+
+.promo{
+  font-size: 5em;
+}
+
+.nailb,.promo,.info{
+  background-color: rgb(255,254,248,0.0);
+  color: white;
+}
+
+.booknow{
+
+    width: 12em;
+    margin-top: 2em; 
+    padding: 1em; 
+    color:rgb(149, 110, 70);
+    border: none;
+
+}
+
+.booknow:hover{
+  cursor: pointer;
+  color: white;
+  background-color: rgb(149, 110, 70);
+  transition: 0.8s;
+}
+
+/* adding testimonals */
+
+.testi{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  
+}
+
+.quote{
+  margin: 1em;
+}
+
+.testi1{
+  background-image: url(../images/Group\ 1quotation.svg);
+  background-size: 12em;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  padding: 1em;
+  width: 33%;
+  
+  
+}
+
+.test , .sthandazile{
+  background: transparent;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.test{
+  padding: 1em;
+  border-right: solid 1px;
+  text-align: justify;
+}
+
+.sthandazile{
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+
+/* styling the footer */
+
+/* footer{
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+  padding: 3em 12em 1em 12em;
+  justify-content: space-around;
+}
+
+footer div ,.sm ,.call ,.reach , .line1{
+  background: transparent;
+}
+
+.social , .address {
+  line-height: 2em;
+  font-size: 1.2em;
+} */
+
+/* #map {
+  height: 300px;
+  width: 30%;
+  border: solid 1px;
+} */
+
+
+footer{
+  background-color: antiquewhite;
+  
+}
+
+.cont-container{
+  background-color: antiquewhite;
+  margin: auto;
+  width: 40%;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.addres ,.cont ,.cont-container{
+  background: transparent;
+  
+
+}
+
+.cont{
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.addres ,.cont-container{
+  font-size: 1.2em;
+  line-height: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.subs-cont{
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+}
+
+.subs{
+  width: 35em;
+  height: 5em;
+  padding: 1em;
+}
+
+.join{
+  width: 7em;
+  height: 5em;
+background-color: rgb(149, 110, 70);
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.logoo{
+  width: 15%;
+  padding: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  
+}
+
+.socio{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+  .cc{
+    text-align: center;
+    width: 100%;
+    padding: 2em;
+  }
+
+ 
+
+
+
